@@ -60,7 +60,7 @@ function App() {
   async function getCityCoords(city)
   {
     let coords = null;
-    let url = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${process.env.REACT_APP_API_KEY}`;
+    let url = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${process.env.REACT_APP_API_KEY}`;
     await fetch(url)
     .then(resp=>{
       if(!resp.ok) throw new Error(resp.statusText);
