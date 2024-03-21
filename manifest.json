@@ -1,0 +1,23 @@
+{
+  "short_name": "Prayer Times",
+  "name": "Prayer Times Chrome Extension",
+  "description": "Chrome Extension shows prayer times with useful info",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "action": {
+    "default title": "Prayer Times",
+    "default_icon": {
+      "16": "favicon.ico",
+      "128": "favicon.ico"
+    }
+  },
+
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  
+  "icons": {
+    "16": "favicon.ico",
+    "128": "favicon.ico"
+  }
+}
