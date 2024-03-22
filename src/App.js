@@ -36,7 +36,7 @@ function App() {
 
   const loading = useSelector(store => store.settings.loading);
 
-  const [cityInput,setCityInput] = useState(city);
+  const [cityInput,setCityInput] = useState({name:city.name,lat:"",lon:""});
   const [calcMethodInput,setCalcMethodInput] = useState(calcMethod);
 
 
@@ -87,7 +87,6 @@ function App() {
 
   function handleCityInput(e)
   {
-    console.log(e.target.value)
     setCityInput({...cityInput,[e.target.name]:e.target.value})
   }
 
@@ -119,13 +118,14 @@ function App() {
       setErrorMessage(null); 
       handleClose();
     }
+    setCityInput({...cityInput,lat:"",lon:""});
   }
 
   function getTimeString(time)
   {
     let h = time.getHours();
     let m = time.getMinutes();
-    return `${h>12 ? h-12 : h}:${m<10 ? "0"+m : m} ${h>=12 ? "PM" : "AM"}`;
+    return `${h>12 ? h-12 : (h>0 ? h : 12)}:${m<10 ? "0"+m : m} ${h>=12 ? "PM" : "AM"}`;
   }
 
   function getCurrentTime(prayerTimes)
@@ -205,7 +205,7 @@ function App() {
   useEffect(()=>{
     if(city && calcMethod)
     {
-      setCityInput(city);
+      setCityInput({...cityInput,name:city.name});
       setCalcMethodInput(calcMethod);
 
       let todayDate = new Date();
