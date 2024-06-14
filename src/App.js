@@ -7,13 +7,13 @@ import { Provider, useDispatch, useSelector } from 'react-redux';
 import store from './Store/store';
 import { getCalcMethod, getCity, setCalcMethod, setCity } from "./Store/slice/settingsSlice";
 import {initialize} from "hijri-js";
-import Clock from "./Components/Clock";
 
 import { FaGlobeAfrica } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
 import { FaInfoCircle } from "react-icons/fa";
 import { RiWifiOffLine } from "react-icons/ri";
 
+import Clock from "./Components/Clock";
 import TimeLeft from "./Components/TimeLeft";
 
 
@@ -23,7 +23,7 @@ function App() {
 
   const prayerKeys = ["fajr","dhuhr","asr","maghrib","isha"];
   const timeKeys = ["fajr","dhuhr","asr","maghrib","isha"];
-  const calcMethodKeys = ["MuslimWorldLeague","Egyptian","Karachi","UmmAlQura","Dubai","MoonsightingCommittee","NorthAmerica","Kuwait","Qatar","Singapore","Tehran","Turkey"]
+  const calcMethodKeys = ["MuslimWorldLeague","Egyptian","Karachi","UmmAlQura","Dubai","MoonsightingCommittee","NorthAmerica","Kuwait","Qatar","Singapore","Tehran","Turkey"];
 
   const [currentDate,setCurrentDate] = useState(Date.now());
   const [currentTime,setCurrentTime] = useState(0);
@@ -39,7 +39,6 @@ function App() {
   const [cityInput,setCityInput] = useState({name:city.name,lat:"",lon:""});
   const [calcMethodInput,setCalcMethodInput] = useState(calcMethod);
 
-
   const [cityModal, setCityModal] = useState(false);
 
   const handleClose = () => setCityModal(false);
@@ -47,7 +46,7 @@ function App() {
 
   const colors = {
     // fajr: ["#D37569","#95A1C8"],
-    fajr: ["#3A3A55","#191923"],
+    fajr: ["#595980","#37374d"],
     dhuhr: ["#95A1C8","#88A3FD"],
     asr: ["#FFF7D4","#DB7393"],
     maghrib: ["#E7663E","#7C5596"],
@@ -158,6 +157,7 @@ function App() {
     // const midnightTime = new Date();
     // midnightTime.setHours(24); midnightTime.setMinutes(0);
     // prayerTimes.midnight = midnightTime;
+
     let targetIndex = null;
     timeKeys.forEach((timeKey,index)=>{
       if(targetIndex===null)
@@ -172,9 +172,9 @@ function App() {
 
     let previousIndex = targetIndex ? targetIndex-1 : timeKeys.length-1;
 
-
     let percent = (date - prayerTimes.today[timeKeys[previousIndex]])/(prayerTimes.today[timeKeys[targetIndex]] - prayerTimes.today[timeKeys[previousIndex]]) * 100;
     if(percent < 0) percent = 100 + percent;
+    else if(percent > 100) percent = 200 - percent;
     
     let c1 = `color-mix(in srgb, ${colors[timeKeys[targetIndex]][0]} ${percent}%, ${colors[timeKeys[previousIndex]][0]})`;
     let c2 = `color-mix(in srgb, ${colors[timeKeys[targetIndex]][1]} ${percent}%, ${colors[timeKeys[previousIndex]][1]})`;
