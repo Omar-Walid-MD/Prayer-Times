@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Prayer-Times/static/css/main.b32bea04.css",
-    "main.js": "/Prayer-Times/static/js/main.c38e27d8.js",
+    "main.js": "/Prayer-Times/static/js/main.5fc6825e.js",
     "static/js/787.28cb0dcd.chunk.js": "/Prayer-Times/static/js/787.28cb0dcd.chunk.js",
     "static/media/corner.png": "/Prayer-Times/static/media/corner.079cff1ee4074a5bbc75.png",
     "static/media/side.png": "/Prayer-Times/static/media/side.a5419db7630104040a1e.png",
@@ -9,11 +9,11 @@
     "static/media/clock.png": "/Prayer-Times/static/media/clock.b244ff921f6eafe874a2.png",
     "index.html": "/Prayer-Times/index.html",
     "main.b32bea04.css.map": "/Prayer-Times/static/css/main.b32bea04.css.map",
-    "main.c38e27d8.js.map": "/Prayer-Times/static/js/main.c38e27d8.js.map",
+    "main.5fc6825e.js.map": "/Prayer-Times/static/js/main.5fc6825e.js.map",
     "787.28cb0dcd.chunk.js.map": "/Prayer-Times/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b32bea04.css",
-    "static/js/main.c38e27d8.js"
+    "static/js/main.5fc6825e.js"
   ]
 }
