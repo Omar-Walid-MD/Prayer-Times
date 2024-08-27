@@ -13,10 +13,11 @@ function TimeLeft({date,colors,prayerTimes,currentTime}) {
 
     function getTimeLeftString()
     {
+        
         let h = "" + Math.abs(parseInt(timeLeft /(1000 * 60 * 60) % 60));
         let m = "" + Math.abs(parseInt(timeLeft / (1000 * 60) % 60));
         let s = "" + Math.abs(parseInt(timeLeft / 1000 % 60));
-        return `${h.length-1 ? h : "0"+h}:${m.length-1 ? m : "0"+m}:${s.length-1 ? s : "0"+s}`;
+        return `${("0"+Math.floor(h)).slice(-2)}:${("0"+Math.floor(m)).slice(-2)}:${("0"+Math.floor(s)).slice(-2)}`;
     }
 
     return (

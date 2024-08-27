@@ -2,7 +2,7 @@
   "short_name": "Prayer Times",
   "name": "Prayer Times Chrome Extension",
   "description": "Chrome Extension shows prayer times with useful info",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "manifest_version": 3,
   "action": {
     "default title": "Prayer Times",

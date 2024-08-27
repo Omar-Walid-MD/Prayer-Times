@@ -51,7 +51,7 @@ function Clock({date}) {
 
     function getTimeString()
     {
-        return `${hours>12 ? hours-12 : hours}:${minutes<10 ? "0"+minutes : minutes} ${hours>=12 ? "PM" : "AM"}`;
+        return `${("0"+(hours%12 || 12)).slice(-2)}:${("0"+Math.floor(minutes)).slice(-2)} ${hours>=12 ? "PM" : "AM"}`;
     }
 
     return (
