@@ -10,6 +10,7 @@
 
 # production
 /build
+/Prayer Times Extension
 
 # misc
 .DS_Store

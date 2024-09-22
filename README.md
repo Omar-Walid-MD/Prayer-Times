@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Prayer Times
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  
 
-## Available Scripts
+## Website URL
 
-In the project directory, you can run:
+  
 
-### `npm start`
+Visit the live demo: [Prayer Times Website](https://omar-walid-md.github.io/Prayer-Times/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Overview
 
-### `npm test`
+  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Prayer Times website to show the prayer times of the day in addition to a countdown to the next prayer and a clock.
 
-### `npm run build`
+  
+  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Frontend**: React
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Styling**: CSS, Bootstrap
 
-### `npm run eject`
+- **State Management**: Redux
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Geolocation**: Open Weather Map API
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Fetching Prayer times**: adhan.js Library
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Fetching Hijri Date**: hijri-js Library
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  
+  
 
-## Learn More
+## How to Install the Chrome Extension
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1.  Download Extension from the **GitHub page** in **Releases** and extract the folder.
+    
+2.  Open Google Chrome Extension menu.
+    
+3.  Enable **Developer Mode** if not enabled.
+    
+4.  Click **Load unpacked** on the top of the screen to load the extension and see the page on a new tab.
+    
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## How to Install and Run the Project Locally
 
-### Analyzing the Bundle Size
+  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+If you wish to run **Prayer Times** on your local machine, follow these steps:
+  
 
-### Making a Progressive Web App
+1. Clone the repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+git clone https://github.com/Omar-Walid-MD/Prayer-Times.git
+```
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. Navigate into the project directory:
 
-### Deployment
+```bash
+cd Prayer-Times
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  
 
-### `npm run build` fails to minify
+3. Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bas
+npm install
+```
+
+  
+
+4. Start the development server:
+
+```bash
+npm start
+```
+
+  
+
+5. Create .env with the following properties and provide a key for the Open Weather Map API:
+
+```
+REACT_APP_API_KEY=value
+```
