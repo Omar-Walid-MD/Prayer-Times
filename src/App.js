@@ -230,7 +230,7 @@ function App() {
   },[currentDate,prayerTimes]);
 
   return (
-    <div className="page-container text-white d-flex align-items-center justify-content-center"
+    <div className="page-container overflow-hidden text-white d-flex align-items-center justify-content-center"
     style={{background:getPageColor(prayerTimes,currentDate)}}
     >
       <div className="decoration-container position-absolute w-100 h-100" style={{pointerEvents:"none"}}>
@@ -253,7 +253,7 @@ function App() {
       <>
         <Row className="w-100 g-0 mt-5 mt-md-0 py-5 py-md-0" style={{zIndex:1}}>
           <Col className="col-12 col-md-4 col-xl-6 d-flex flex-column align-items-center justify-content-center">
-            <div className="d-flex flex-column align-items-center">
+            <div className="d-flex flex-column align-items-center text-center px-md-5" dir="ltr">
               <Clock date={currentDate} />
               <hr className="w-100 border border-white border-2" />
               <span className="fs-3 text-shadow fw-semibold">{getHijriDate()}</span>
